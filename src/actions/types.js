@@ -3,3 +3,4 @@ export const UNAUTH_USER = 'unauth_user';
 export const AUTH_ERROR = 'auth_error';
 export const FETCH_FEATURE = 'fetch_feature';
 export const FETCH_FEATUREDETAIL = 'fetch_featureDetail';
+export const MONITOR_TEXT = 'monitorText';

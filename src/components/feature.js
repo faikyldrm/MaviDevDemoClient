@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import featureDetail from '../components/featureDetail'
 import * as actions from '../actions';
 import '../style/style.css'
+import History from '../history.js';
 import { Link, Route, useLocation, BrowserRouter as Router } from "react-router-dom";
 class Feature extends PureComponent {
 
@@ -43,9 +44,12 @@ class Feature extends PureComponent {
                         </thead>
                         <tbody>
                             {this.renderFeature()}
+                            
                         </tbody>
                     </table>
+                    <button onClick={() => History.push('/monitorText')}> Show Me Text </button>
                 </ul>
+              
             </div>
         );
     }
