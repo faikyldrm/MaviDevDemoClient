@@ -140,11 +140,19 @@ export const getTextMonitor = () => {
 }
  
 axios.interceptors.request.use(function (config) {
-    const token = localStorage.getItem('token');
-    config.headers.Authorization = token ? `Bearer ${token}` : '';
-   // config.headers.Accept = "application/json";
-    // config.headers.ContentType = "application/json;charset=UTF-8";
-    return config;
-    // Important: request interceptors **must** return the request.
+    
+    if (config.url == `${ROOT_URL}/v1/auth/signIn` || config.url == `${ROOT_URL}/v1/auth/signUp` || config.url == `${ROOT_URL}/textMonitor`) {
+        
+        return config;
+    }
+    else {
+        const token = localStorage.getItem('token');
+        config.headers.Authorization = token ? `Bearer ${token}` : '';
+        // config.headers.Accept = "application/json";
+        // config.headers.ContentType = "application/json;charset=UTF-8";
 
+        
+        return config;
+        // Important: request interceptors **must** return the request.
+    }
 });

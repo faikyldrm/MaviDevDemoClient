@@ -6,11 +6,15 @@ class Header extends PureComponent {
 
     renderLinks() {
         if (this.props.authenticated) {
-            return (
+            return [
                 <li className="nav-item">
                     <Link className="nav-link" to="/signout">Sign Out</Link>
-                </li>
-            );
+                </li>,
+
+                <li className="nav-item" key="ShowUser">
+                    <Link className="nav-link" to="/feature">Show UserList</Link>
+                </li>,
+            ];
         } else {
             return [
                 <li className="nav-item" key="signin">
@@ -19,12 +23,8 @@ class Header extends PureComponent {
                 <li className="nav-item" key="signup">
                     <Link className="nav-link" to="/signup">Sign Up</Link>
                 </li>,
-                <li className="nav-item" key="ShowText">
-                    <Link className="nav-link" to="/monitorText">Show Text</Link>
-                </li>,
-                <li className="nav-item" key="ShowUser">
-                    <Link className="nav-link" to="/feature">Show UserList</Link>
-                </li>
+
+
             ];
         }
     }
@@ -35,6 +35,9 @@ class Header extends PureComponent {
                 <Link to="/" className="navbar-brand">MaviDev</Link>
 
                 <ul className="navbar-nav">
+                    <li className="nav-item" key="ShowUser">
+                        <Link className="nav-link" to="/monitorText">Show Text</Link>
+                    </li>
                     {this.renderLinks()}
                 </ul>
             </nav>
