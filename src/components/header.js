@@ -18,6 +18,12 @@ class Header extends PureComponent {
                 </li>,
                 <li className="nav-item" key="signup">
                     <Link className="nav-link" to="/signup">Sign Up</Link>
+                </li>,
+                <li className="nav-item" key="ShowText">
+                    <Link className="nav-link" to="/monitorText">Show Text</Link>
+                </li>,
+                <li className="nav-item" key="ShowUser">
+                    <Link className="nav-link" to="/feature">Show UserList</Link>
                 </li>
             ];
         }
