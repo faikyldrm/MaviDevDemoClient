@@ -6,6 +6,7 @@ import Signin from '../components/auth/signin';
 import Signout from '../components/auth/signout';
 import Signup from '../components/auth/signup';
 import Feature from '../components/feature';
+import monitorText from '../components/monitorText';
 import Welcome from '../components/welcome';
 import FeatureDetail from '../components/featureDetail';
 
@@ -18,6 +19,7 @@ const Routes = () => {
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/feature" component={RequireAuth(Feature)} />
             <Route exact path="/featureDetail" component={RequireAuth(FeatureDetail)} />
+            <Route exact path="/monitorText" component={RequireAuth(monitorText)} />
         </App>
     );
 };
