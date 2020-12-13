@@ -19,7 +19,7 @@ const Routes = () => {
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/feature" component={RequireAuth(Feature)} />
             <Route exact path="/featureDetail" component={RequireAuth(FeatureDetail)} />
-            <Route exact path="/monitorText" component={RequireAuth(monitorText)} />
+            <Route exact path="/monitorText" component={monitorText} />
         </App>
     );
 };
